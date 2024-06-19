@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 
-import BN from 'bn.js'
+import { BigNumber } from 'ethers/lib'
 import { expect } from 'chai'
 import {
   gtcrEncode,
@@ -91,7 +91,7 @@ describe('Encoding and Decoding', () => {
       NegativeNumber: MAX_SIGNED_INTEGER.toString(),
       PositiveNumber: MIN_SIGNED_INTEGER.toString(),
       Boolean: true,
-      'Twitter User Profile': new BN(65516516161).toString(),
+      'Twitter User Profile': BigNumber.from(65516516161).toString(),
       Description:
         'Repudiandae rerum nobis ut velit quia repellendus. Laudantium reiciendis qui voluptate. Sit officiis molestiae omnis rerum fugiat natus. Sunt totam magnam laboriosam. Et error et',
     }
